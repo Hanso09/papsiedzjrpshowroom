@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papsi Edz Motorparts & Accessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href= "css/style copy.css">
+</head>
+    <header class="header">
+        <div class="logo-container">
+            <img src="image/logo.jpg" alt="Papsi Edz Logo" class="logo">
+            <h1 class="site-title">PAPSI EDZ MOTORPARTS X JRP SHOWROOM</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="about.html" class="nav-btn">About Us</a>
+            <a href="#" class="nav-btn" onclick="openCartSidebar()"><i class="fas fa-shopping-cart"></i> Cart <span id="cartCount" class="cart-count">0</span></a>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <a href="frameandsupport.html">Frame and Support</a>
+        <div class="dropdown">
+            <a href="">Motorparts</a>
+            <div class="dropdown-content">
+                <a href="flatseat.html">Flatseat</a>
+                <a href="brakesystem.html">Brake System</a>
+                <a href="swingarm.html">SwingArm</a>
+                <a href="suspension.html">Suspension</a>
+                <a href="engineparts.html">Engine Parts</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="limited edition.html">Limited Edition</a>
+        </div>
+        <a href="sale.html">Sale</a>
+    </nav>
+    <script src = "js/dropdown.js"></script>
+
+    <div class="banner-slider">
+        <div class="banner-slides">
+            <div class="banner-slide">
+                <img src="image/carbon.jpg" alt="Exclusive Motorparts">
+            </div>
+            
+            <div class="banner-slide">
+                <img src="Jrp Products/Assorted JRP Products/cnchubjrp.jpg" alt="Premium Performance Parts">
+                <div class="banner-content">
+                    <h2>Offering Any Kinds of Brand you Desire!</h2>
+                    <p>Premium Quality and Original Products</p>
+                    <a href="index.html" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="banner-slide">
+                <img src="Jrp Products/Assorted JRP Products/jrpshirt.jpeg" alt="Racing Components">
+                <div class="banner-content">
+                    <h2>Motorparts & Accessories</h2>
+                    <p>Number 1 JRP DEALER OF PANGASINAN</p>
+                    <a href="index.html" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+            
+            <div class="banner-slide">
+                <img src="Jrp Products/Assorted JRP Products/jrprim1.jpg" alt="New Arrivals">
+                <div class="banner-content">
+                    <h2>New Arrivals</h2>
+                    <p>Check out our latest products and innovations</p>
+                    <a href="index.html" class="banner-btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="banner-arrow banner-prev" onclick="moveBannerSlide(-1)">&#10094;</div>
+        <div class="banner-arrow banner-next" onclick="moveBannerSlide(1)">&#10095;</div>
+        
+        <div class="banner-dots">
+            <div class="banner-dot active" onclick="currentBannerSlide(0)"></div>
+            <div class="banner-dot" onclick="currentBannerSlide(1)"></div>
+            <div class="banner-dot" onclick="currentBannerSlide(2)"></div>
+            <div class="banner-dot" onclick="currentBannerSlide(3)"></div>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="hero-product">
+            <span class="limited-offer">Limited Offer</span>
+            <div class="hero-content">
+                <div class="hero-image-container clickable" onclick="openModal(this)">
+                    <img src="Jrp Products/Swing Arm/sw11.jpg" alt="JRP swingarm" class="hero-image">
+                </div>
+                <div class="hero-details">
+                    <h1 class="product-title">JRP Swing Arm</h1>
+                    <p class="product-description">Experience the ultimate in comfort and style with our premium JRP Swing Arm. Featuring high-quality materials, precision engineering, and perfect fitment for your motorcycle. Limited time offer with 30% discount!</p>
+                    <div class="price-info">
+                        <span class="original-price">₱5,000</span>
+                        <span class="current-price">3,500</span>
+                    </div>
+                    <div class="hero-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="rating-text">Best Seller</span>
+                    </div>
+                    <div class="hero-specs">
+                        <ul>
+                            <li>Premium quality materials</li>
+                            <li>Ergonomic design</li>
+                            <li>Weather-resistant coating</li>
+                            <li>Easy installation</li>
+                        </ul>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+
+        <h2 class="section-header" id="new-arrivals">New Arrivals</h2>
+        <div class="product-slider-container">
+          <button class="slider-arrow left" onclick="scrollProductSlider(this, -1)">&#10094;</button>
+          <div class="product-slider">
+            <div class="product-item">
+              <span class="label new">New</span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/JRP Newest Flatseat/nj1.jpg" alt="JRP Flat Seat">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Flat Seat</div>
+                <div class="product-price">₱3,500</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <span class="label"></span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Assorted JRP Products/jrpcaliperwave(1).jpg" alt="JRP Caliper Wave">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Caliper Wave</div>
+                <div class="product-price">₱5,000</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item">
+              <span class="label hot">Hot</span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Assorted JRP Products/tpost2.jpg" alt="JRP T-Post">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP T-Post</div>
+                <div class="product-price">₱2,000</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <span class="label"></span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Assorted JRP Products/jrpbrakehose.jpg" alt="JRP Brake Hose">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Brake Hose</div>
+                <div class="product-price">₱3,500</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <span class="label hot">Hot</span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Assorted JRP Products/jrpbrakepanelcnc.jpg" alt="JRP Brake Panel CNC">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Brake Panel CNC</div>
+                <div class="product-price">₱2,000</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <span class="label hot">Hot</span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Suspension/s1.jpg" alt="JRP Suspension">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Suspensions</div>
+                <div class="product-price">₱5,000</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-item">
+              <span class="label hot">Hot</span>
+              <div class="product-image-container clickable" onclick="openModal(this)">
+                <img src="Jrp Products/Swing Arm/sw1.jpg" alt="JRP Swing Arm">
+              </div>
+              <div class="product-info">
+                <div class="product-name">JRP Swing Arm</div>
+                <div class="product-price">₱5,000-7,000</div>
+                <div class="button-container">
+                    <button class="mini-add-btn">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="slider-arrow right" onclick="scrollProductSlider(this, 1)">&#10095;</button>
+        </div>
+
+
+        <div class="category-section">
+          <h2 class="section-header">Best Sellers</h2>
+          <div class="product-slider-container">
+            <button class="slider-arrow left" onclick="scrollProductSlider(this, -1)">&#10094;</button>
+            <div class="product-slider">
+              <div class="product-item">
+                <span class="label"></span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/alloy handlebar.jpg" alt="JRP Alloy Handlebar">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Alloy Handlebar</div>
+                  <div class="product-price">₱3,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label"></span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="image/cnclightenfront.jpg" alt="CNC Lighten Inner Tube">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">CNC Lighten Inner Tube</div>
+                  <div class="product-price">₱5,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label"></span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/jrpinnertube.jpg" alt="JRP Inner Tube">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Inner Tube</div>
+                  <div class="product-price">₱5,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label"></span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/brakemasternmaxaerox.jpg" alt="JRP Brake Master">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Brake Master</div>
+                  <div class="product-price">₱5,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label hot">Hot</span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/calipercnc.jpg" alt="JRP Caliper CNC">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Caliper CNC</div>
+                  <div class="product-price">₱5,000-7,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label hot">Hot</span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/floatingdisc.jpg" alt="JRP Floating Disc">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Floating Disc</div>
+                  <div class="product-price">₱5,000-7,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label hot">Hot</span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/flungehubxrmwave.jpg" alt="JRP Flunge Hub">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Flunge Hub</div>
+                  <div class="product-price">₱5,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item">
+                <span class="label hot">Hot</span>
+                <div class="product-image-container clickable" onclick="openModal(this)">
+                  <img src="Jrp Products/Assorted JRP Products/jrpbleeder.jpg" alt="JRP Bleeder">
+                </div>
+                <div class="product-info">
+                  <div class="product-name">JRP Bleeder</div>
+                  <div class="product-price">₱5,000</div>
+                  <div class="button-container">
+                      <button class="mini-add-btn">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-arrow right" onclick="scrollProductSlider(this, 1)">&#10095;</button>
+          </div>
+        </div>
+        <div id="productModal" class="modal">
+          <div class="modal-content">
+              <span class="close-modal">&times;</span>
+              <div class="modal-body">
+                  <div class="modal-image-container">
+                      <img id="modalProductImage" src="" alt="Product Image">
+                  </div>
+                  <div class="modal-product-details">
+                      <h2 id="modalProductName"></h2>
+                      <p id="modalProductPrice" class="modal-price"></p>
+                      <div class="modal-rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                      </div>
+                      <div class="modal-description">
+                          <h3>Product Description</h3>
+                          <p id="modalProductDescription">Experience premium quality and performance with our JRP products. Each item is carefully crafted to meet the highest standards of durability and style.</p>
+                      </div>
+                      <div class="modal-specifications">
+                          <h3>Specifications</h3>
+                          <ul id="modalProductSpecs">
+                              <li>High-quality materials</li>
+                              <li>Precision engineering</li>
+                              <li>Durable construction</li>
+                              <li>Perfect fitment</li>
+                          </ul>
+                      </div>
+                      <button class="modal-add-to-cart">
+                          <i class="fas fa-shopping-cart"></i> Add to Cart
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        <div class="location-section">
+          <h2 class="location-header">Our Location</h2>
+          <div class="location-container">
+            <div class="location-info">
+              <h3>Papsi Edz Motorparts & Accessories</h3>
+              <p>P J. Ramos St, Asingan, 2439 Pangasinan</p>
+              <p>Monday - Saturday: 8:30 AM - 6:00 PM<br>Sunday: Closed</p>
+              <p>Customer Care Hotline: 0917-703-0700</p>
+              <a href="https://www.google.com/maps/place/Papsi+Edz+Motorparts+x+JRP+Showroom/@16.0063891,120.6647049,17z/data=!4m14!1m7!3m6!1s0x3391171436dde48b:0x677f71654b13527f!2sPapsi+Edz+Motorparts+x+JRP+Showroom!8m2!3d16.0063891!4d120.6672798!16s%2Fg%2F11vsnvrnws!3m5!1s0x3391171436dde48b:0x677f71654b13527f!8m2!3d16.0063891!4d120.6672798!16s%2Fg%2F11vsnvrnws?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="get-directions-btn">Get Directions</a>
+        </div>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.1368682955167!2d120.66470487490268!3d16.006389084664026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391171436dde48b%3A0x677f71654b13527f!2sPapsi%20Edz%20Motorparts%20x%20JRP%20Showroom!5e0!3m2!1sen!2sph!4v1747305643161!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+        
+        </div>
+    </div>
+
+    
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3 class="footer-title">Contact Us</h3>
+              <p>P J. Ramos St, Asingan, 2439 Pangasinan</p>
+              <p>
+                <i class="fas fa-envelope" style="color:#0492C2; margin-right:8px;"></i>
+                <a href="mailto:info@papsiedz.com" class="footer-contact-link">edrickdarrenpaz@gmail.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone-alt" style="color:#0492C2; margin-right:8px;"></i>
+                <a href="tel:+639123456789" class="footer-contact-link">+639052754190</a>
+              </p>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-title">Quick Links</h3>
+              <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+              </div>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-title">Follow Us</h3>
+              <div class="footer-links">
+                <a href="https://facebook.com/papsiedz" target="_blank">Facebook</a>
+                <a href="https://instagram.com/papsiedz" target="_blank">Instagram</a>
+                <a href="https://youtube.com/papsiedz" target="_blank">YouTube</a>
+                <a href="https://tiktok.com/@papsiedz" target="_blank">TikTok</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="copyright">
+              &copy; 2025 Papsi Edz Motorparts & Accessories. All Rights Reserved.
+          </div>
+      </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src ="js/script.js"></script>
+    <script src="banner.js"></script>
+    <script src = "js/scriptfirstpage.js"></script>
+    <script src = "js/slideranimation.js"></script>
+    <script src = "js/indexModal.js"></script>
+    <script src = "js/cart.js"></script>
+
+
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <span class="close-cart" onclick="closeCartSidebar()">&times;</span>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <span id="cartTotal"></span>
+        <button onclick="checkoutCart()" class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCartSidebar()"></div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero product add to cart
+            const heroAddToCart = document.querySelector('.hero-product .add-to-cart');
+            if (heroAddToCart) {
+                heroAddToCart.addEventListener('click', function() {
+                    const product = {
+                        name: document.querySelector('.product-title').textContent,
+                        price: document.querySelector('.current-price').textContent,
+                        image: document.querySelector('.hero-image').src
+                    };
+                    addToCart(product);
+                });
+            }
+
+
+            document.querySelectorAll('.product-slider .mini-add-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const productItem = btn.closest('.product-item');
+                    const product = {
+                        name: productItem.querySelector('.product-name').textContent,
+                        price: productItem.querySelector('.product-price').textContent.replace(/[^0-9.]/g, ''),
+                        image: productItem.querySelector('img').src
+                    };
+                    addToCart(product);
+                });
+            });
+
+
+            const modalAddToCart = document.querySelector('.modal-add-to-cart');
+            if (modalAddToCart) {
+                modalAddToCart.addEventListener('click', function() {
+                    const product = {
+                        name: document.getElementById('modalProductName').textContent,
+                        price: document.getElementById('modalProductPrice').textContent.replace(/[^0-9.]/g, ''),
+                        image: document.getElementById('modalProductImage').src
+                    };
+                    addToCart(product);
+                    closeModal();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

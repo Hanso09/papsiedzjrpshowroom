@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale - Papsi Edz Motorparts & Accessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style copy.css">
+    <link rel="stylesheet" href="css/sale.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="image/logo.jpg" alt="Papsi Edz Logo" class="logo">
+            <h1 class="site-title">PAPSI EDZ MOTORPARTS X JRP SHOWROOM</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="about.html" class="nav-btn">About Us</a>
+            <a href="#" class="nav-btn" onclick="openCartSidebar()"><i class="fas fa-shopping-cart"></i> Cart <span id="cartCount" class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="frameandsupport.html">Frame and Support</a>
+        <div class="dropdown">
+            <a href="">Motorparts</a>
+            <div class="dropdown-content">
+                <a href="flatseat.html">Flatseat</a>
+                <a href="brakesystem.html">Brake System</a>
+                <a href="swingarm.html">SwingArm</a>
+                <a href="suspension.html">Suspension</a>
+                <a href="engineparts.html">Engine Parts</a>
+                
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="limited edition.html">Limited Edition</a>
+        </div>
+        <a href="sale.html">Sale</a>
+    </nav>
+
+    <div class="sale-banner">
+        <h1>MEGA SALE</h1>
+        <p>Up to 50% off on selected items</p>
+        <p>Limited time offer - Don't miss out!</p>
+    </div>
+
+    <div class="sale-categories">
+        <div class="category-section">
+            <h2 class="category-title">Performance Parts</h2>
+            <div class="sale-grid">
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="HRC Racing Exhaust" data-price="₱12,000" data-original-price="₱15,000" data-image="Jrp Products/Assorted JRP Products/caliperjrp.jpg" data-discount="-20%">
+                        <img src="Jrp Products/Assorted JRP Products/caliperjrp.jpg" alt="HRC Racing Exhaust">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">Best Seller</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>HRC Racing Exhaust</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱15,000</span>
+                            <span class="sale-price">₱12,000</span>
+                            <span class="discount-badge">-20%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="JRP Rear Shock" data-price="₱5,000" data-original-price="₱7,000" data-image="Jrp Products/Suspension/s16.jpg" data-discount="-29%">
+                        <img src="Jrp Products/Suspension/s16.jpg" alt="JRP Rear Shock">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">New Arrival</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>JRP Rear Shock</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱7,000</span>
+                            <span class="sale-price">₱5,000</span>
+                            <span class="discount-badge">-29%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Comfort & Style</h2>
+            <div class="sale-grid">
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="JRP Flat Seat" data-price="₱2,000" data-original-price="₱3,500" data-image="Jrp Products/JRP Newest Flatseat/nj1.jpg" data-discount="-43%">
+                        <img src="Jrp Products/JRP Newest Flatseat/nj1.jpg" alt="JRP Flat Seat">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">Popular</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>JRP Flat Seat</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱3,500</span>
+                            <span class="sale-price">₱2,000</span>
+                            <span class="discount-badge">-43%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="JRP Swing Arm" data-price="₱5,000" data-original-price="₱7,000" data-image="Jrp Products/Swing Arm/sw15.jpg" data-discount="-29%">
+                        <img src="Jrp Products/Swing Arm/sw15.jpg" alt="JRP Swing Arm">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">Limited</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>JRP Swing Arm</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱7,000</span>
+                            <span class="sale-price">₱5,000</span>
+                            <span class="discount-badge">-29%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Engine Parts</h2>
+            <div class="sale-grid">
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="JRP Crank Case" data-price="₱3,500" data-original-price="₱5,000" data-image="Jrp Products/Assorted JRP Products/crankcaserfi150.jpg" data-discount="-30%">
+                        <img src="Jrp Products/Assorted JRP Products/crankcaserfi150.jpg" alt="JRP Crank Case">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">Hot Deal</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>JRP Crank Case</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱5,000</span>
+                            <span class="sale-price">₱3,500</span>
+                            <span class="discount-badge">-30%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sale-item">
+                    <div class="sale-item-image" onclick="openSaleModal(this)" data-name="JRP Crank Case" data-price="₱3,800" data-original-price="₱5,000" data-image="Jrp Products/Assorted JRP Products/crankcasenouvo_mio.jpg" data-discount="-24%">
+                        <img src="Jrp Products/Assorted JRP Products/crankcasenouvo_mio.jpg" alt="JRP Crank Case">
+                        <div class="sale-overlay">
+                            <span class="sale-tag">Featured</span>
+                        </div>
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>JRP Crank Case</h3>
+                        <div class="price-container">
+                            <span class="original-price">₱5,000</span>
+                            <span class="sale-price">₱3,800</span>
+                            <span class="discount-badge">-24%</span>
+                        </div>
+                        <div class="button-container">
+                            <button class="sale-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Contact Us</h3>
+                <p>P J. Ramos St, Asingan, 2439 Pangasinan</p>
+                <p>
+                  <i class="fas fa-envelope" style="color:#0492C2; margin-right:8px;"></i>
+                  <a href="mailto:info@papsiedz.com" class="footer-contact-link">edrickdarrenpaz@gmail.com</a>
+                </p>
+                <p>
+                  <i class="fas fa-phone-alt" style="color:#0492C2; margin-right:8px;"></i>
+                  <a href="tel:+639123456789" class="footer-contact-link">+639052754190</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Follow Us</h3>
+                <div class="footer-links">
+                    <a href="https://facebook.com/papsiedz" target="_blank">Facebook</a>
+                    <a href="https://instagram.com/papsiedz" target="_blank">Instagram</a>
+                    <a href="https://youtube.com/papsiedz" target="_blank">YouTube</a>
+                    <a href="https://tiktok.com/@papsiedz" target="_blank">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Papsi Edz Motorparts & Accessories. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span class="close-cart" onclick="closeCartSidebar()">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <span id="cartTotal"></span>
+            <button onclick="checkoutCart()" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+ 
+    <div id="cartOverlay" class="cart-overlay" onclick="closeCartSidebar()"></div>
+
+    <script>
+   
+        document.addEventListener('DOMContentLoaded', function() {
+     
+            document.querySelectorAll('.sale-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const saleItem = btn.closest('.sale-item');
+                    const product = {
+                        name: saleItem.querySelector('h3').textContent,
+                        price: saleItem.querySelector('.sale-price').textContent.replace(/[^0-9.]/g, ''),
+                        image: saleItem.querySelector('.sale-item-image img').src
+                    };
+                    addToCart(product);
+                });
+            });
+
+       
+            const modalAddToCart = document.querySelector('.modal-add-to-cart');
+            if (modalAddToCart) {
+                modalAddToCart.addEventListener('click', function() {
+                    const product = {
+                        name: document.getElementById('modalProductName').textContent,
+                        price: document.getElementById('modalProductPrice').textContent.replace(/[^0-9.]/g, ''),
+                        image: document.getElementById('modalProductImage').src
+                    };
+                    addToCart(product);
+                    closeModal();
+                });
+            }
+        });
+    </script>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalProductImage" src="" alt="Product Image">
+                </div>
+                <div class="modal-product-details">
+                    <h2 id="modalProductName"></h2>
+                    <div class="modal-price-container">
+                        <p id="modalProductOriginalPrice" class="modal-original-price"></p>
+                        <p id="modalProductPrice" class="modal-price"></p>
+                        <span id="modalDiscountBadge" class="discount-badge"></span>
+                    </div>
+                    <div class="modal-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Product Description</h3>
+                        <p id="modalProductDescription">Experience premium quality and performance with our JRP products. Each item is carefully crafted to meet the highest standards of durability and style.</p>
+                    </div>
+                    <div class="modal-specifications">
+                        <h3>Specifications</h3>
+                        <ul id="modalProductSpecs">
+                            <li>High-quality materials</li>
+                            <li>Precision engineering</li>
+                            <li>Durable construction</li>
+                            <li>Perfect fitment</li>
+                            <li>Special sale discount applied</li>
+                            <li>Limited time offer</li>
+                        </ul>
+                    </div>
+                    <button class="modal-add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/sale-modal.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 

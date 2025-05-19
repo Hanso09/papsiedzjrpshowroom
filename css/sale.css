@@ -1,0 +1,424 @@
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        #111 10px,
+        #111 20px
+    );
+}
+.sale-banner {
+    background: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        #111 10px,
+        #111 20px
+    );
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto;
+    max-width: 1400px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.sale-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 204, 0, 0.13) 0%, transparent 100%);
+    z-index: 1;
+}
+
+.sale-banner h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #0492C2, #0492C2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(255, 204, 0, 0.2);
+    transform: translateZ(30px);
+    position: relative;
+    z-index: 2;
+}
+
+.sale-banner p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateZ(20px);
+    position: relative;
+    z-index: 2;
+}
+
+.sale-categories {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.category-section {
+    margin-bottom: 4rem;
+    perspective: 1000px;
+}
+
+.category-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0492C2;
+    text-shadow: 0 2px 10px rgba(255, 204, 0, 0.3);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #0492C2, transparent);
+}
+
+.sale-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.sale-item {
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.sale-item:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sale-item-image {
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.sale-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateZ(20px);
+}
+
+.sale-item:hover img {
+    transform: translateZ(30px) scale(1.05);
+}
+
+.sale-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateZ(25px);
+}
+
+.sale-item:hover .sale-overlay {
+    opacity: 1;
+}
+
+.sale-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(45deg, #0492C2, #0492C2);
+    color: #222;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transform: translateZ(30px);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+.sale-item-content {
+    padding: 1.5rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 100%);
+    transform: translateZ(10px);
+}
+
+.sale-item h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    transform: translateZ(15px);
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.sale-price {
+    color: #0492C2;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(255, 204, 0, 0.2);
+}
+
+.discount-badge {
+    background: linear-gradient(45deg, #0492C2, #0492C2);
+    color: #222;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transform: translateZ(25px);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+.sale-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #0492C2, #0492C2);
+    color: #222;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateZ(20px);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sale-btn:hover {
+    transform: translateZ(25px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .sale-banner {
+        padding: 3rem 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    .sale-banner h1 {
+        font-size: 3.2rem;
+    }
+
+    .sale-banner p {
+        font-size: 1.3rem;
+    }
+
+    .category-title {
+        font-size: 2.2rem;
+    }
+    
+    .sale-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .sale-item img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sale-banner {
+        padding: 2.5rem 1rem;
+        margin: 1rem auto;
+        border-radius: 20px;
+    }
+
+    .sale-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .sale-banner p {
+        font-size: 1.1rem;
+    }
+
+    .category-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .category-title::after {
+        width: 80px;
+    }
+
+    .sale-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .sale-item img {
+        height: 350px;
+    }
+
+    .sale-item-content {
+        padding: 1.2rem;
+    }
+
+    .sale-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .price-container {
+        margin-bottom: 1.2rem;
+    }
+
+    .original-price {
+        font-size: 1rem;
+    }
+
+    .sale-price {
+        font-size: 1.3rem;
+    }
+
+    .sale-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-banner {
+        padding: 2rem 0.8rem;
+        margin: 0.8rem auto;
+        border-radius: 15px;
+    }
+
+    .sale-banner h1 {
+        font-size: 2rem;
+    }
+
+    .sale-banner p {
+        font-size: 1rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .category-title::after {
+        width: 60px;
+        height: 2px;
+    }
+
+    .sale-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .sale-item img {
+        height: 300px;
+    }
+
+    .sale-item-content {
+        padding: 1rem;
+    }
+
+    .sale-item h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .price-container {
+        margin-bottom: 1rem;
+        gap: 0.8rem;
+    }
+
+    .original-price {
+        font-size: 0.9rem;
+    }
+
+    .sale-price {
+        font-size: 1.2rem;
+    }
+
+    .discount-badge {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .sale-btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .sale-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .sale-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .sale-banner p {
+        font-size: 0.9rem;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+
+    .sale-item img {
+        height: 250px;
+    }
+
+    .sale-item h3 {
+        font-size: 1rem;
+    }
+
+    .sale-price {
+        font-size: 1.1rem;
+    }
+
+    .original-price {
+        font-size: 0.8rem;
+    }
+} 
